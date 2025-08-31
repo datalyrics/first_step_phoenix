@@ -95,4 +95,27 @@ phoenix
     > mix phoenix.server
     # Browser: http://localhost:4000
 
+6. file not in the repo:
+- my_app/config/prod.secret.exs
+you should adjust: secret_key_base, username, password
 
+    use Mix.Config
+
+    # In this file, we keep production configuration that
+    # you likely want to automate and keep it away from
+    # your version control system.
+    #
+    # You should document the content of this
+    # file or create a script for recreating it, since it's
+    # kept out of version control and might be hard to recover
+    # or recreate for your teammates (or you later on).
+    config :my_app, MyApp.Endpoint,
+    secret_key_base: "foobar"
+
+    # Configure your database
+    config :my_app, MyApp.Repo,
+    adapter: Ecto.Adapters.Postgres,
+    username: "user",
+    password: "pass",
+    database: "my_app_prod",
+    pool_size: 20
