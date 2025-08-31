@@ -10,7 +10,7 @@
     <title>Hello MyApp!</title>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-  </head>
+   </head>
 
   <body>
     <nav class="light-blue">
