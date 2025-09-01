@@ -94,7 +94,7 @@ phoenix
     > mix ecto.create
     > mix phoenix.server
     # Browser: http://localhost:4000
-
+ 
 6. file not in the repo:
 - my_app/config/prod.secret.exs
 you should adjust: secret_key_base, username, password
@@ -119,3 +119,17 @@ you should adjust: secret_key_base, username, password
     password: "pass",
     database: "my_app_prod",
     pool_size: 20
+
+
+
+
+project
+=================================================================================
+
+1. Create a migration file for model->db
+> mix ecto.gen.migration add_topics
+
+2. Execute migration
+> mix ecto.migrate
+
+
