@@ -1,0 +1,6 @@
+<form>
+    <input type="text" />
+    you must enter a title!<br>
+
+    <input type="submit">
+</form>
