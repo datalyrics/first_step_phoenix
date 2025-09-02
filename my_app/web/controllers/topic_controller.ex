@@ -13,7 +13,10 @@ defmodule MyApp.TopicController do
     IO.inspect(topic)
 
 
-    changeset = Topic.changeset(%Topic{}, %{})
-    render conn, "new.html", changeset: changeset
+    changeset = Topic.changeset(%Topic{}, topic)
+    Repo.insert(changeset)
+
+
+    render conn, "new.html", changeset: Topic.changeset(%Topic{}, %{})
   end
 end
