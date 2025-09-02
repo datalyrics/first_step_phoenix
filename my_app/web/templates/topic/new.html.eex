@@ -1,6 +1,7 @@
-<form>
-    <input type="text" />
-    you must enter a title!<br>
+<%= form_for @changeset, topic_path(@conn, :create), fn f ->  %>
+    <div class="form-group">
+        <%= text_input f, :title, placeholder: "Title", class: "form-control" %>
+        <%= submit "Save Topic", class: "btn btn-primary" %>
+    </div>
 
-    <input type="submit">
-</form>
+<% end %>

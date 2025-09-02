@@ -1,8 +1,12 @@
 defmodule MyApp.TopicController do
   use MyApp.Web, :controller
 
-  def new(conn, _params) do
-    render conn, "new.html"
+  alias MyApp.Topic
+
+  def new(conn, params) do
+    changeset = Topic.changeset(%Topic{}, %{})
+
+    render conn, "new.html", changeset: changeset
   end
 
 end
