@@ -1,6 +1,6 @@
 ## first step with Phoenix (1.2.5)
 
-MacOS 15.6.1
+MacOS 26
 
 erlang 21
 
